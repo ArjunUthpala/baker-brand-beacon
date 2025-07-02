@@ -5,33 +5,81 @@ import { Card } from '@/components/ui/card';
 const Gallery = () => {
   const galleryCategories = [
     {
-      title: "Fresh Baked Goods",
-      description: "Our daily selection of breads, pastries, and treats",
+      title: "Traditional Sri Lankan Baked Goods",
+      description: "Our daily selection of authentic pol roti, patties, and traditional treats",
       images: [
-        { id: 1, alt: "Artisan bread display" },
-        { id: 2, alt: "Fresh croissants" },
-        { id: 3, alt: "Assorted pastries" },
-        { id: 4, alt: "Daily bread selection" }
+        { 
+          id: 1, 
+          alt: "Fresh pol roti and coconut bread display",
+          src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 2, 
+          alt: "Golden fish patties and pastries",
+          src: "https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=400&h=400&fit=crop" 
+        },
+        { 
+          id: 3, 
+          alt: "Assorted Sri Lankan sweet treats",
+          src: "https://images.unsplash.com/photo-1501286353178-1ec881214838?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 4, 
+          alt: "Daily bread selection with coconut varieties",
+          src: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?w=400&h=400&fit=crop"
+        }
       ]
     },
     {
-      title: "Our Welcoming Space",
-      description: "Step inside our cozy, community-focused bakery",
+      title: "Our Warm Sri Lankan Welcome",
+      description: "Experience genuine Sri Lankan hospitality in our cozy, culturally-rich bakery",
       images: [
-        { id: 5, alt: "Bakery interior" },
-        { id: 6, alt: "Customer seating area" },
-        { id: 7, alt: "Display counter" },
-        { id: 8, alt: "Entrance and storefront" }
+        { 
+          id: 5, 
+          alt: "Traditional Sri Lankan bakery interior",
+          src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 6, 
+          alt: "Comfortable seating area with cultural touches",
+          src: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 7, 
+          alt: "Display counter showcasing Sri Lankan specialties",
+          src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 8, 
+          alt: "Welcoming entrance with cultural decorations",
+          src: "https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=400&h=400&fit=crop"
+        }
       ]
     },
     {
-      title: "Behind the Scenes",
-      description: "Meet our team and see our baking process",
+      title: "Traditional Preparation & Our Team",
+      description: "Meet our family and see authentic Sri Lankan baking methods in action",
       images: [
-        { id: 9, alt: "Bakers at work" },
-        { id: 10, alt: "Kneading dough" },
-        { id: 11, alt: "Oven fresh bread" },
-        { id: 12, alt: "Team photo" }
+        { 
+          id: 9, 
+          alt: "Bakers preparing traditional pol roti",
+          src: "https://images.unsplash.com/photo-1501286353178-1ec881214838?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 10, 
+          alt: "Traditional dough preparation techniques",
+          src: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 11, 
+          alt: "Fresh from the oven - traditional breads",
+          src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop"
+        },
+        { 
+          id: 12, 
+          alt: "Our happy Sri Lankan bakery family",
+          src: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=400&h=400&fit=crop"
+        }
       ]
     }
   ];
@@ -43,10 +91,11 @@ const Gallery = () => {
         <div className="container-width section-padding">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Gallery
+              Gallery - ගැලරිය
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Take a peek inside IMR Bakers and see what makes us special - from our fresh baked goods to our welcoming atmosphere
+              Take a peek inside IMR Bakers and experience the authentic Sri Lankan hospitality, 
+              traditional baking methods, and warm atmosphere that makes us special
             </p>
           </div>
         </div>
@@ -68,11 +117,12 @@ const Gallery = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {category.images.map((image, imageIndex) => (
                 <Card key={imageIndex} className="card-hover overflow-hidden">
-                  <div className="aspect-square bg-gray-200 flex items-center justify-center">
-                    <div className="text-center text-gray-400">
-                      <div className="text-4xl mb-2">📸</div>
-                      <p className="text-sm">{image.alt}</p>
-                    </div>
+                  <div className="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 </Card>
               ))}
@@ -86,24 +136,24 @@ const Gallery = () => {
         <div className="container-width section-padding">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Experience IMR Bakers Yourself
+              Experience Sri Lankan Hospitality - ශ්‍රී ලාංකික ආගන්තුක සත්කාරය
             </h2>
             <p className="text-xl text-orange-100 mb-8">
-              Pictures can only tell part of our story. Visit us today to experience the warmth, 
-              aroma, and community spirit that makes IMR Bakers truly special.
+              Pictures can only tell part of our story. Visit us today to experience the authentic flavors, 
+              warm hospitality, and cultural richness that makes IMR Bakers a true taste of Sri Lanka.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/branches"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-medium rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Find Our Locations
+                Find Our Locations - අපේ ස්ථාන
               </a>
               <a
                 href="/menu"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-primary transition-colors"
               >
-                View Our Menu
+                View Our Menu - මෙනුව බලන්න
               </a>
             </div>
           </div>

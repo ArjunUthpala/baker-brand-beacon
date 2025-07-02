@@ -7,23 +7,23 @@ const About = () => {
   const values = [
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Community First",
-      description: "We believe in serving our neighbors with genuine care and building lasting relationships in our community."
+      title: "Sri Lankan Hospitality - ආගන්තුක සත්කාරය",
+      description: "We embrace the true spirit of Sri Lankan hospitality, treating every guest like family with genuine warmth and care."
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Quality Always",
-      description: "Every item is crafted with premium ingredients and traditional baking techniques passed down through generations."
+      title: "Authentic Traditions - සම්ප්‍රදායික රස",
+      description: "Every recipe is rooted in Sri Lankan tradition, using time-honored techniques and the finest local ingredients."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Friendly Service",
-      description: "Our welcoming staff treats every customer like family, ensuring your visit is always pleasant and memorable."
+      title: "Community Unity - ප්‍රජා සාමුහිකත්වය",
+      description: "We bring people together, celebrating Sri Lankan culture and creating connections over shared meals and traditions."
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Fresh Daily",
-      description: "We bake fresh every morning, so you always get the best quality and taste in every bite."
+      title: "Heritage & Quality - උරුමය හා ගුණත්වය",
+      description: "Preserving Sri Lankan culinary heritage while maintaining the highest standards of freshness and quality."
     }
   ];
 
@@ -34,11 +34,11 @@ const About = () => {
         <div className="container-width section-padding">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Story
+              අපේ කතාව - Our Story
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              At IMR Bakers, we're more than just a bakery - we're a cornerstone of our community, 
-              dedicated to bringing families together over fresh, affordable, and delicious baked goods.
+              At IMR Bakers, we're more than just a bakery - we're keepers of Sri Lankan culinary tradition, 
+              bringing authentic flavors and warm hospitality to our community every single day.
             </p>
           </div>
         </div>
@@ -50,29 +50,68 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                A Family Tradition of Excellence
+                A Sri Lankan Family Tradition
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  IMR Bakers began with a simple dream: to create a warm, welcoming space where everyone 
-                  could enjoy high-quality baked goods without breaking the bank. What started as a small 
-                  family operation has grown into a beloved community institution.
+                  IMR Bakers was born from a deep love for Sri Lankan culinary traditions and a desire to share 
+                  the authentic taste of our homeland with our community. Our story begins with traditional 
+                  recipes passed down through generations, each carrying the essence of Sri Lankan hospitality.
                 </p>
                 <p>
-                  Our founders believed that great food should be accessible to everyone. That's why we've 
-                  always maintained our commitment to affordable pricing without compromising on quality. 
-                  Every loaf of bread, every pastry, and every sweet treat is made with the same care and 
-                  attention to detail that built our reputation.
+                  From the early morning preparation of fresh pol roti to the careful crafting of our signature 
+                  fish patties, every item in our bakery tells a story of Sri Lankan heritage. We believe that 
+                  food is not just nourishment - it's a bridge that connects hearts, cultures, and communities.
                 </p>
                 <p>
-                  Today, we're proud to serve multiple locations while maintaining the personal touch and 
-                  friendly service that makes IMR Bakers special. When you visit us, you're not just a 
-                  customer - you're part of our extended family.
+                  Today, we proudly serve as a cultural ambassador, introducing Sri Lankan flavors to new friends 
+                  while providing a taste of home for those who share our heritage. Our commitment remains unchanged: 
+                  authentic recipes, genuine hospitality, and affordable prices for everyone.
                 </p>
               </div>
             </div>
-            <div className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
-              <p className="text-gray-400">Family Photo / Bakery Interior Image</p>
+            <div className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg h-96 flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=500&h=400&fit=crop" 
+                alt="Sri Lankan cultural heritage and community"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cultural Heritage Section */}
+      <section className="py-16 bg-primary/5">
+        <div className="container-width section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg h-96 flex items-center justify-center overflow-hidden lg:order-1">
+              <img 
+                src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=500&h=400&fit=crop" 
+                alt="Traditional Sri Lankan ingredients and spices"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div className="lg:order-2">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Rooted in Sri Lankan Culture
+              </h2>
+              <div className="space-y-4 text-gray-600">
+                <p>
+                  Our recipes are treasures from Sri Lankan kitchens, where coconut, spices, and traditional 
+                  techniques create flavors that warm the soul. From the fragrant pol roti made with fresh 
+                  coconut to our signature love cake enriched with cashews and aromatic spices.
+                </p>
+                <p>
+                  We source our ingredients with care - the finest coconut from local suppliers, traditional 
+                  jaggery for our sweet treats, and spices that capture the essence of Sri Lankan cuisine. 
+                  Every bite connects you to the beautiful island of Sri Lanka.
+                </p>
+                <p>
+                  "සර්වං අන්නමයං ජගත් - The whole world is food" - this ancient wisdom guides our approach, 
+                  treating food as a sacred offering to our community, prepared with love and served with joy.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -83,10 +122,10 @@ const About = () => {
         <div className="container-width section-padding">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What We Stand For
+              Our Values - අපේ වටිනාකම්
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our values guide everything we do, from the way we bake our bread to how we greet our customers.
+              These values, deeply rooted in Sri Lankan culture, guide everything we do - from how we prepare our food to how we welcome our guests.
             </p>
           </div>
 
@@ -119,27 +158,27 @@ const About = () => {
         <div className="container-width section-padding">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Team
+              Our Family - අපේ පවුල
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Behind every delicious baked good is a dedicated team of passionate bakers and friendly staff 
-              who take pride in serving our community.
+              Behind every delicious creation is our dedicated family of bakers and staff who bring 
+              Sri Lankan warmth and expertise to everything they do.
             </p>
           </div>
 
           <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg p-8 text-center">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Our Commitment to You
+                Our Promise to You - අපේ පොරොන්දුව
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Every member of our team shares the same passion for quality and service that founded IMR Bakers. 
-                From our skilled bakers who arrive before dawn to ensure fresh products, to our friendly counter 
-                staff who greet you with genuine smiles, we're all committed to making your experience exceptional.
+                Every member of our team carries the spirit of Sri Lankan hospitality in their heart. 
+                From our skilled bakers who wake before dawn to prepare fresh pol roti, to our friendly 
+                staff who greet you with genuine "ආයුබෝවන්" (Ayubowan), we're all united by one mission.
               </p>
               <p className="text-gray-600">
-                We believe that our success comes from treating every customer like a valued member of our community. 
-                That's the IMR Bakers difference, and it's what keeps families coming back generation after generation.
+                We believe in "දාන" (Dana) - the joy of giving. That's why we give our best to every 
+                customer, sharing not just food, but also the warmth, culture, and traditions of beautiful Sri Lanka.
               </p>
             </div>
           </div>

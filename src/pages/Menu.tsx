@@ -7,147 +7,149 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('breads');
 
   const categories = [
-    { id: 'breads', name: 'Fresh Breads', icon: '🍞' },
-    { id: 'pastries', name: 'Pastries', icon: '🥐' },
-    { id: 'cakes', name: 'Cakes & Desserts', icon: '🎂' },
-    { id: 'beverages', name: 'Beverages', icon: '☕' },
+    { id: 'breads', name: 'Traditional Breads', icon: '🍞' },
+    { id: 'pastries', name: 'Sweet Treats', icon: '🥐' },
+    { id: 'cakes', name: 'Celebration Cakes', icon: '🎂' },
+    { id: 'beverages', name: 'Ceylon Beverages', icon: '☕' },
     { id: 'specials', name: 'Daily Specials', icon: '⭐' }
   ];
 
   const menuItems = {
     breads: [
       {
-        name: "Artisan Sourdough",
-        description: "Traditional sourdough with crispy crust and soft interior",
-        price: "$6.99",
+        name: "Pol Roti",
+        description: "Traditional coconut flatbread, crispy outside and soft inside",
+        price: "LKR 25",
         popular: true
       },
       {
-        name: "Whole Wheat Loaf",
-        description: "Nutritious whole wheat bread perfect for daily meals",
-        price: "$5.49"
+        name: "Coconut Bread Loaf",
+        description: "Soft white bread enriched with fresh coconut milk",
+        price: "LKR 180"
       },
       {
-        name: "French Baguette",
-        description: "Classic French baguette with authentic texture",
-        price: "$4.99"
+        name: "Seeni Sambol Buns",
+        description: "Sweet onion sambol filled soft buns, perfect for tea time",
+        price: "LKR 35"
       },
       {
-        name: "Multigrain Bread",
-        description: "Hearty bread packed with seeds and grains",
-        price: "$6.49"
+        name: "Whole Wheat Paan",
+        description: "Nutritious whole wheat bread, baked fresh daily",
+        price: "LKR 200"
       },
       {
-        name: "Dinner Rolls (6 pack)",
-        description: "Soft, fluffy rolls perfect for any meal",
-        price: "$3.99"
+        name: "Milk Bread Rolls (6 pack)",
+        description: "Soft, fluffy milk buns perfect with curry",
+        price: "LKR 150"
       }
     ],
     pastries: [
       {
-        name: "Butter Croissant",
-        description: "Flaky, buttery croissant made fresh daily",
-        price: "$2.99",
+        name: "Fish Patties",
+        description: "Flaky pastry filled with spiced fish and potato curry",
+        price: "LKR 45",
         popular: true
       },
       {
-        name: "Pain au Chocolat",
-        description: "Croissant filled with rich dark chocolate",
-        price: "$3.49"
+        name: "Chicken Patties",
+        description: "Golden pastry with aromatic chicken curry filling",
+        price: "LKR 50"
       },
       {
-        name: "Almond Danish",
-        description: "Sweet pastry topped with sliced almonds",
-        price: "$3.99"
+        name: "Vegetable Rolls",
+        description: "Crispy rolls filled with spiced mixed vegetables",
+        price: "LKR 40"
       },
       {
-        name: "Blueberry Muffin",
-        description: "Moist muffin bursting with fresh blueberries",
-        price: "$2.49"
+        name: "Chinese Rolls",
+        description: "Popular Sri Lankan-Chinese fusion spring rolls",
+        price: "LKR 35"
       },
       {
-        name: "Cinnamon Roll",
-        description: "Warm, gooey cinnamon roll with cream cheese glaze",
-        price: "$3.79"
+        name: "Isso Vade",
+        description: "Traditional prawn fritters, crispy and flavorful",
+        price: "LKR 60"
       }
     ],
     cakes: [
       {
-        name: "Chocolate Layer Cake",
-        description: "Rich chocolate cake with creamy chocolate frosting",
-        price: "$24.99",
+        name: "Rich Fruit Cake",
+        description: "Traditional Sri Lankan cake with dried fruits and cashews",
+        price: "LKR 2,500",
         note: "Whole cake - serves 8-10"
       },
       {
-        name: "Vanilla Birthday Cake",
-        description: "Classic vanilla sponge with buttercream frosting",
-        price: "$22.99",
+        name: "Love Cake",
+        description: "Iconic Sri Lankan semolina cake with cashews and spices",
+        price: "LKR 1,800",
         note: "Whole cake - serves 8-10"
       },
       {
-        name: "Cheesecake Slice",
-        description: "Creamy New York style cheesecake",
-        price: "$4.99",
+        name: "Bibikkan Slice",
+        description: "Traditional coconut cake with jaggery and cashews",
+        price: "LKR 85",
         popular: true
       },
       {
-        name: "Apple Pie",
-        description: "Traditional apple pie with flaky crust",
-        price: "$18.99",
-        note: "Whole pie - serves 6-8"
+        name: "Watalappan",
+        description: "Creamy coconut custard with jaggery and spices",
+        price: "LKR 1,200",
+        note: "Whole portion - serves 6-8"
       },
       {
-        name: "Chocolate Chip Cookies (dozen)",
-        description: "Soft and chewy chocolate chip cookies",
-        price: "$12.99"
+        name: "Butter Cake",
+        description: "Light and fluffy vanilla sponge cake",
+        price: "LKR 1,500",
+        note: "Whole cake - serves 8-10"
       }
     ],
     beverages: [
       {
-        name: "Freshly Brewed Coffee",
-        description: "Premium blend coffee, served hot or iced",
-        price: "$2.49"
+        name: "Ceylon Black Tea",
+        description: "Premium Sri Lankan tea, served hot with milk",
+        price: "LKR 80"
       },
       {
-        name: "Cappuccino",
-        description: "Espresso with steamed milk and foam",
-        price: "$3.99"
+        name: "Plain Tea",
+        description: "Traditional black tea without milk, pure and strong",
+        price: "LKR 60"
       },
       {
-        name: "Hot Chocolate",
-        description: "Rich, creamy hot chocolate topped with whipped cream",
-        price: "$3.49"
+        name: "Ginger Tea",
+        description: "Warming tea with fresh ginger and spices",
+        price: "LKR 90"
       },
       {
-        name: "Fresh Orange Juice",
-        description: "Freshly squeezed orange juice",
-        price: "$3.99"
+        name: "Fresh King Coconut",
+        description: "Natural king coconut water, refreshing and healthy",
+        price: "LKR 120"
       },
       {
-        name: "Herbal Tea",
-        description: "Selection of premium herbal teas",
-        price: "$2.99"
+        name: "Coffee",
+        description: "Local coffee blend, rich and aromatic",
+        price: "LKR 100"
       }
     ],
     specials: [
       {
-        name: "Tuesday Special",
-        description: "Fresh croissants & coffee combo",
-        price: "$8.99",
-        originalPrice: "$12.99",
+        name: "Morning Special",
+        description: "Pol roti + fish curry + tea combo",
+        price: "LKR 250",
+        originalPrice: "LKR 320",
         popular: true
       },
       {
-        name: "Family Pack",
-        description: "2 loaves of bread + dozen muffins",
-        price: "$19.99",
-        originalPrice: "$25.99"
+        name: "Tea Time Pack",
+        description: "4 patties + 2 rolls + Ceylon tea",
+        price: "LKR 400",
+        originalPrice: "LKR 480"
       },
       {
-        name: "Baker's Dozen",
-        description: "Any 13 pastries for the price of 12",
-        price: "Mix & Match",
-        note: "Save on bulk orders"
+        name: "Family Pack",
+        description: "Coconut bread + 6 buns + dozen rolls",
+        price: "LKR 450",
+        originalPrice: "LKR 580",
+        note: "Perfect for family meals"
       }
     ]
   };
@@ -159,10 +161,10 @@ const Menu = () => {
         <div className="container-width section-padding">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Menu
+              අපේ ආහාර - Our Menu
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover our full range of freshly baked goods, made daily with love and the finest ingredients
+              Authentic Sri Lankan baked goods and traditional treats, made fresh daily with love and the finest local ingredients
             </p>
           </div>
         </div>
@@ -201,7 +203,7 @@ const Menu = () => {
                     <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
                     {item.popular && (
                       <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
-                        Popular
+                        ජනප්‍රිය
                       </Badge>
                     )}
                   </div>
@@ -234,14 +236,14 @@ const Menu = () => {
         <div className="container-width section-padding">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Order?
+              ඔබේ ඇණවුම සූදානම්ද? - Ready to Order?
             </h2>
             <p className="text-gray-600 mb-6">
-              Visit any of our locations to enjoy fresh baked goods. Online ordering coming soon!
+              Visit any of our locations to enjoy fresh Sri Lankan baked goods. Call ahead for special traditional orders!
             </p>
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
               <p className="text-primary font-medium">
-                💡 Pro Tip: Call ahead for large orders or special requests. We're happy to accommodate!
+                🏺 Traditional Tip: Try our fish patties with a cup of Ceylon tea for the authentic Sri Lankan experience!
               </p>
             </div>
           </div>

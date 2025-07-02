@@ -8,71 +8,130 @@ import { Star, Clock, Heart, Award } from 'lucide-react';
 const Home = () => {
   const dailySpecials = [
     {
-      name: "Tuesday Special",
-      item: "Fresh Croissants & Coffee Combo",
-      price: "$8.99",
-      originalPrice: "$12.99",
-      description: "Buttery croissants with your choice of coffee"
+      name: "අද දිනයේ විශේෂ",
+      item: "Pol Roti & Fish Curry Combo",
+      price: "LKR 250",
+      originalPrice: "LKR 320",
+      description: "Traditional coconut roti with authentic fish curry"
     },
     {
-      name: "Baker's Choice",
-      item: "Artisan Sourdough Bread",
-      price: "$4.99",
-      originalPrice: "$6.99",
-      description: "Freshly baked this morning"
+      name: "Tea Time Special",
+      item: "Fish Patties & Ceylon Tea",
+      price: "LKR 180",
+      originalPrice: "LKR 225",
+      description: "Crispy fish patties with premium Ceylon black tea"
     },
     {
-      name: "Sweet Deal",
-      item: "Dozen Assorted Muffins",
-      price: "$18.99",
-      originalPrice: "$24.99",
-      description: "Perfect for sharing with family"
+      name: "Family Pack",
+      item: "Mixed Pastries Bundle",
+      price: "LKR 450",
+      originalPrice: "LKR 580",
+      description: "Perfect assortment for the whole family"
     }
   ];
 
   const features = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Quick Service",
-      description: "Fresh baked goods ready when you are"
+      title: "Fresh Daily - දිනපතා නැවුම්",
+      description: "Baked fresh every morning with traditional methods"
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: "Friendly Staff",
-      description: "Welcoming smiles with every visit"
+      title: "Warm Hospitality - සිතින් සේවය",
+      description: "True Sri Lankan warmth and friendly service"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Quality Ingredients",
-      description: "Only the finest ingredients in every bite"
+      title: "Authentic Flavors - සම්ප්‍රදායික රස",
+      description: "Traditional Sri Lankan recipes passed down generations"
     },
     {
       icon: <Star className="w-6 h-6" />,
-      title: "Local Favorite",
-      description: "Trusted by the community since day one"
+      title: "Community Favorite - ප්‍රජා ප්‍රියතම",
+      description: "Trusted by families across Sri Lanka"
     }
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-20">
-        <div className="container-width section-padding">
+      <section className="hero-gradient text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container-width section-padding relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to <span className="text-orange-100">IMR Bakers</span>
+              ආයුබෝවන් - Welcome to <span className="text-orange-100">IMR Bakers</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-orange-100">
-              Your friendly neighborhood bakery serving fresh, affordable, and delicious baked goods with a smile
+              Your neighborhood's taste of authentic Sri Lanka - serving fresh, traditional baked goods with genuine warmth and hospitality
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-                <Link to="/menu">View Our Menu</Link>
+                <Link to="/menu">View Our Menu - මෙනුව බලන්න</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Link to="/branches">Find Our Locations</Link>
+                <Link to="/branches">Find Our Locations - අපේ ස්ථාන</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Traditional Sample Images Section */}
+      <section className="py-16 bg-white">
+        <div className="container-width section-padding">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Sri Lankan Delights
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From traditional pol roti to crispy fish patties, taste the authentic flavors of Sri Lanka
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="card-hover overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop" 
+                  alt="Traditional Sri Lankan baked goods display"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">Traditional Baked Goods</h3>
+                <p className="text-gray-600 text-sm">Fresh pol roti, coconut bread, and traditional pastries</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="card-hover overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop" 
+                  alt="Cozy bakery interior with Sri Lankan hospitality"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">Warm & Welcoming Space</h3>
+                <p className="text-gray-600 text-sm">Experience true Sri Lankan hospitality in our cozy bakery</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="card-hover overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=400&h=300&fit=crop" 
+                  alt="Fresh ingredients and traditional preparation"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">Fresh Local Ingredients</h3>
+                <p className="text-gray-600 text-sm">Using the finest Sri Lankan coconut, spices, and fresh produce</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -82,10 +141,10 @@ const Home = () => {
         <div className="container-width section-padding">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Today's Special Deals
+              Today's Special Deals - අදයේ විශේෂ
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Don't miss out on our daily specials - fresh baked goods at unbeatable prices!
+              Don't miss out on our daily specials - authentic Sri Lankan flavors at unbeatable prices!
             </p>
           </div>
 
@@ -113,7 +172,7 @@ const Home = () => {
 
           <div className="text-center mt-8">
             <Button asChild size="lg">
-              <Link to="/menu">See Full Menu</Link>
+              <Link to="/menu">See Full Menu - සම්පූර්ණ මෙනුව</Link>
             </Button>
           </div>
         </div>
@@ -124,10 +183,10 @@ const Home = () => {
         <div className="container-width section-padding">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose IMR Bakers?
+              Why Choose IMR Bakers? - ඇයි අපව තෝරගන්නේ?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're more than just a bakery - we're your neighborhood's go-to place for quality, affordability, and genuine hospitality.
+              We're more than just a bakery - we're your gateway to authentic Sri Lankan flavors, served with genuine warmth and care.
             </p>
           </div>
 
@@ -150,17 +209,17 @@ const Home = () => {
         <div className="container-width section-padding">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Experience the IMR Difference?
+              Ready to Experience Sri Lankan Hospitality? - ශ්‍රී ලාංකික ආගන්තුක සත්කාරය අත්විඳින්න
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Visit us today and discover why we're the community's favorite bakery. Fresh baked goods, friendly service, and affordable prices - that's the IMR promise.
+              Visit us today and discover why we're the community's favorite for authentic Sri Lankan baked goods. Fresh flavors, warm hospitality, and affordable prices - that's our promise to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link to="/branches">Find Our Locations</Link>
+                <Link to="/branches">Find Our Locations - අපේ ස්ථාන</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link to="/about">Learn Our Story</Link>
+                <Link to="/about">Learn Our Story - අපේ කතාව</Link>
               </Button>
             </div>
           </div>
